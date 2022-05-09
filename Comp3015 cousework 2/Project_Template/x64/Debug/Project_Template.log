@@ -1,0 +1,10 @@
+﻿  main.cpp
+C:\Users\liamh\Documents\GitHub\comp3015\Project_Templatenew\Project_Template\scenebasic_uniform.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\liamh\Documents\GitHub\comp3015\Project_Templatenew\Project_Template\scenebasic_uniform.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  scenebasic_uniform.cpp
+C:\Users\liamh\Documents\GitHub\comp3015\Project_Templatenew\Project_Template\scenebasic_uniform.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\liamh\Documents\GitHub\comp3015\Project_Templatenew\Project_Template\scenebasic_uniform.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\liamh\Documents\GitHub\comp3015\Project_Templatenew\Project_Template\scenebasic_uniform.cpp(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\liamh\Documents\GitHub\comp3015\Project_Templatenew\Project_Template\scenebasic_uniform.cpp(90,27): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+  Project_Template.vcxproj -> C:\Users\liamh\Documents\GitHub\comp3015\Project_Templatenew\Project_Template\x64\Debug\Project_Template.exe
