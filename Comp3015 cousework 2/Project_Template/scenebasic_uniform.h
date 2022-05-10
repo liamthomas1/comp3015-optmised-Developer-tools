@@ -24,10 +24,16 @@ private:
     std::unique_ptr<ObjMesh> mesh;
  /*   Torus torus;*/
     Cube cube;
+
+    float tPrev, lightAngle, lightRotationSpeed; 
+    glm::vec4 lightPos;
+   
     void setMatrices();
-
     void compile();
-
+    void drawScene();
+    void drawFloor();
+    void DrawSport(const glm::vec3& pos, float rough, int metal, const glm::vec3& color);
+     
 public:
     SceneBasic_Uniform();
 

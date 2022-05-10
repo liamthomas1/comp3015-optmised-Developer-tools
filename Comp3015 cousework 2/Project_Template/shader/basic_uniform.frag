@@ -36,5 +36,42 @@ f0 = Material.Color;
 return f0 + (1 - f0) * pow(1.0 - lDotH, 5);
 }
 
-vec3 microfacetModel ( 
+vec3 microfacetModel (  int lightIdx, vec3 position, vec3 n) {
+vec3 diffuseBrdf = vec3 (0.0);
+if (!Material.Metal){
+diffuseBrdf = Material.Color;
+}
+vec3 l = vec3(0.0),
+Lightl = Light[lightIdx].L;
+if (Light[lightIdx].Position.w == 0.0){
+l = normalize(Light[lightIdx].Position.xyz);
+}
+else {
+Light[lightIdx].Position.xyz - position;
+float dist = length(l);
+l = normalize(l);
+Lightl /= (dist * dist);
+}
+vec3 v = normalize(-position);
+vec3 h = normalize(v + 1);
+float nDotH = dot(n,h);
+float lDotH = dot( l,h);
+float nDotL = max (dot(n,l),0.0);
+float nDotV = dot ( n,v);
+vec3 specBrdf = 0.25 * ggxDistribution(nDotH) * schlickFresbel(lDotH) * geomSmith(nDotL);
+
+return (diffuseBrdf + pi * specBrdf) * Lightl * nDotL;
+}
+
+void main(){
+vec3 sum = vec3(0);
+vec3 n = normalize(Normal);
+for (int i = 0; i< 3; i++){
+sum += microfacetModel( i, Position, n);
+}
+
+sum = pow( sum, vec3(1.0/2.2));
+FragColor = vec4 (sum, 1); 
+} 
+
  

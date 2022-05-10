@@ -18,6 +18,7 @@ Normal = normalize(NormalMatrix * VertexNormal);
 Position = ( ModelViewMatrix * vec4(VertexPosition,1.0) ).xyz;
 
 
-gl_Position = MVP* vec4 (VertexPosition,1.0); 
+gl_Position = MVP* vec4 (VertexPosition,1.0);
+} 
 
 // the light time to add more folder as well menu 
