@@ -52,6 +52,10 @@ void SceneBasic_Uniform::initScene()
     prog.setUniform("Light[2].Position", view * glm::vec4(-7, 3, 7, 1));
 
 
+    //geom
+    glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
+    glEnable(GL_DEPTH_TEST);
+
 }
 
 void SceneBasic_Uniform::compile()

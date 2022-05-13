@@ -1,1 +1,9 @@
-﻿  Project_Template.vcxproj -> C:\Users\liamh\Documents\GitHub\comp3015-optmised-Developer-tools\Comp3015 cousework 2\Project_Template\x64\Debug\Project_Template.exe
+﻿  main.cpp
+C:\Users\liamh\Documents\GitHub\comp3015-optmised-Developer-tools\Comp3015 cousework 2\Project_Template\scenebasic_uniform.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\liamh\Documents\GitHub\comp3015-optmised-Developer-tools\Comp3015 cousework 2\Project_Template\scenebasic_uniform.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  scenebasic_uniform.cpp
+C:\Users\liamh\Documents\GitHub\comp3015-optmised-Developer-tools\Comp3015 cousework 2\Project_Template\scenebasic_uniform.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\liamh\Documents\GitHub\comp3015-optmised-Developer-tools\Comp3015 cousework 2\Project_Template\scenebasic_uniform.h(6,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\liamh\Documents\GitHub\comp3015-optmised-Developer-tools\Comp3015 cousework 2\Project_Template\scenebasic_uniform.cpp(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  Generating Code...
+  Project_Template.vcxproj -> C:\Users\liamh\Documents\GitHub\comp3015-optmised-Developer-tools\Comp3015 cousework 2\Project_Template\x64\Debug\Project_Template.exe

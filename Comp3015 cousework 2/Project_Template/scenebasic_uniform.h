@@ -18,6 +18,10 @@ private:
     //GLuint vaoHandle;
     GLSLProgram prog;
     //float angle; for lab 2 both need to remove 
+    //goem
+    GLuint sprites;
+    int numSprites;
+    float* location;
     Torus torus;
     Teapot teapot;
     Plane plane; 
