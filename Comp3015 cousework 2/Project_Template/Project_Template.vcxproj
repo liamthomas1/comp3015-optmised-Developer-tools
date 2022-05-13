@@ -166,6 +166,9 @@
     <ClCompile Include="scenebasic_uniform.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Geometry.frag" />
+    <None Include="Geometry.geom" />
+    <None Include="Geometry.vert" />
     <None Include="shaders\Oldcode.frag" />
     <None Include="shaders\oldcode_couserwork1.vert" />
     <None Include="shader\basic_uniform.frag" />
