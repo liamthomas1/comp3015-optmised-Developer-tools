@@ -32,7 +32,9 @@ SceneBasic_Uniform::SceneBasic_Uniform() : plane(50.0f,50.0f,1,1), teapot(14,glm
 
 void SceneBasic_Uniform::initScene()
 {
+    
     compile();
+    // pbr
     glClearColor(0.1f, 0.1f, 0.2f, 1.0f);
     glEnable(GL_DEPTH_TEST);
     view = glm::lookAt(
@@ -55,6 +57,23 @@ void SceneBasic_Uniform::initScene()
     //geom
     glClearColor(0.5f, 0.5f, 0.5f, 1.0f);
     glEnable(GL_DEPTH_TEST);
+
+    numSprites = 50;
+    location = new float[numSprites * 3];
+    srand((unsigned int)time(0));
+
+    for (int i = 0; i < numSprites; i++)
+    {
+        vec3 p(((float)rand() / RAND_MAX * 2.0f) - 1.0f,
+            ((float)rand() / RAND_MAX * 2.0f) - 1.0f,
+            ((float)rand() / RAND_MAX * 2.0f) - 1.0f);
+        location[i * 3] = p.x;
+        location[i * 3 + 1] = p.y;
+        location[i * 3 + 2] = p.z;
+
+    }
+    GLuint handle;
+    glGenBuffers(1,)
 
 }
 
