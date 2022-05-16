@@ -1,8 +1,13 @@
 #version 460
-
+//
 const float pi = 3.14159265358979323846;
 in vec3 Position;
 in vec3 Normal;
+in vec2 TexCoord;
+
+layout(binding = 0) uniform sampler2D Tex1;
+
+vec3 texColor = texture(Tex1, TexCoord).rgb;
 
 uniform struct LightInfo {
 vec4 Position;
@@ -16,6 +21,7 @@ vec3 Color;
 } Material;
 
 layout (location = 0) out vec4 FragColor;
+
 
 float ggxDistribution (float nDotH){
 float alpha2 = Material.Rough * Material.Rough * Material.Rough * Material.Rough;
@@ -41,13 +47,14 @@ vec3 diffuseBrdf = vec3 (0.0);
 if (!Material.Metal){
 diffuseBrdf = Material.Color;
 }
+
 vec3 l = vec3(0.0),
 Lightl = Light[lightIdx].L;
 if (Light[lightIdx].Position.w == 0.0){
 l = normalize(Light[lightIdx].Position.xyz);
 }
 else {
-Light[lightIdx].Position.xyz - position;
+l = Light[lightIdx].Position.xyz - position;
 float dist = length(l);
 l = normalize(l);
 Lightl /= (dist * dist);
@@ -74,4 +81,51 @@ sum = pow( sum, vec3(1.0/2.2));
 FragColor = vec4 (sum, 1); 
 } 
 
- 
+
+
+//struct LightInfo {
+//vec4 Position;
+//vec3 Intensity;
+//};
+//uniform struct LightInfo Light; 
+//
+//struct MaterialInfo{
+//vec3 Ka;
+//vec3 Kd;
+//vec3 Ks;
+//float Shininess;
+//};
+//uniform struct MaterialInfo Material;
+//
+//uniform struct LineInfo {
+//float Width;
+//vec4 Color;
+//} Line;
+//
+//in vec3 GPosition;
+//in vec3 GNormal;
+//noperspective in vec3 GEdgeDistance; 
+//
+// vec3 phongModel(vec3 position, vec3 normal){
+//
+// return normal + position ;
+//}
+//
+//layout ( location = 0 ) out vec4 FragColor;
+//
+//void main (){
+//vec4 color = vec4 ( phongModel(GPosition, GNormal), 1.0f);
+//
+//float d = min (GEdgeDistance.x , GEdgeDistance.y);
+//d = min ( d, GEdgeDistance.z);
+//
+//float mixVal;
+//if (d < Line.Width - 1){
+//mixVal = 0.0;
+//}
+//else {
+//float x = d - (Line.Width - 1);
+//mixVal = exp2 ( -2.0 * (x*x));
+//}
+//FragColor = mix ( color, Line.Color, mixVal);
+//} 

@@ -19,6 +19,7 @@ private:
     GLSLProgram prog;
     //float angle; for lab 2 both need to remove 
     //goem
+   
     GLuint sprites;
     int numSprites;
     float* location;
@@ -28,6 +29,7 @@ private:
     std::unique_ptr<ObjMesh> mesh;
  /*   Torus torus;*/
     Cube cube;
+    glm::mat4 viewport; 
 
     float tPrev, lightAngle, lightRotationSpeed; 
     glm::vec4 lightPos;

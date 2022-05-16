@@ -80,13 +80,13 @@
     <None Include="shaders\oldcode_couserwork1.vert">
       <Filter>shaders</Filter>
     </None>
-    <None Include="Geometry.vert">
+    <None Include="Geometry_uniform.vert">
       <Filter>shaders</Filter>
     </None>
-    <None Include="Geometry.frag">
+    <None Include="Geometry_uniform.frag">
       <Filter>shaders</Filter>
     </None>
-    <None Include="Geometry.geom">
+    <None Include="geometry_uniform.gs">
       <Filter>shaders</Filter>
     </None>
   </ItemGroup>
