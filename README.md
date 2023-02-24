@@ -11,6 +11,6 @@ there are the goal for this project
 also anycode from last coursework will be mark with //done on comp3015 coursework 1 so people know what new
 
 the project now
-So as this project deadline is due in tomoorw i had to focuse more on one thing which is getting pbr working and give a new effect that had not been seen 
+So as this project deadline is due in soon which mean  i had to focuse more on one thing which is getting pbr working and give a new effect that had not been seen 
 so using the code that Mairus Varga has given for pbr i went to work create a new idea for the ligth to showcase a rand being used to ranmod gentert the model to different models in the cpp which allow the user to see and have bit of fun having random dount or pig(given by Mairus)  which also to show case how it adpet well when thing are changing this.
-also some bug texture are currenly not working as i mess up when include it in pbr which need a fix but i going have to do a later on as this is running out of time for the deadline
+also some bug texture are currenly not working as it should so for time being it not working but will be look at when have more time when include it in pbr which need a fix but i going have to do a later on as this is running out of time for the deadline
